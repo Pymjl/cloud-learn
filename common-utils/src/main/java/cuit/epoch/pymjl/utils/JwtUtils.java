@@ -110,17 +110,17 @@ public class JwtUtils {
         return createJWT(map, expiration * TIME_UNIT);
     }
 
-    @Value("${jwt.expiration}")
+    @Value("${jwt.expiration:36000}")
     public void setTokenExpiredTime(long tokenExpiredTime) {
         JwtUtils.expiration = tokenExpiredTime;
     }
 
-    @Value("${jwt.id}")
+    @Value("${jwt.id:token}")
     public void setJwtId(String jwtId) {
         JwtUtils.jwtId = jwtId;
     }
 
-    @Value("${jwt.secret}")
+    @Value("${jwt.secret:cuit.pymjl.epoch}")
     public void setJwtSecret(String jwtSecret) {
         JwtUtils.jwtSecret = jwtSecret;
     }

@@ -5,6 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>common-utils</module>
+        <module>user-service</module>
     </modules>
 
     <parent>
@@ -24,17 +25,12 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <skipTests>true</skipTests>
-        <docker.maven.plugin.version>0.40.0</docker.maven.plugin.version>
         <spring-boot.version>2.7.0</spring-boot.version>
         <spring-cloud.version>2021.0.3</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.0.1.0</spring-cloud-alibaba.version>
         <spring-cloud-starter-oauth2.version>2.2.5.RELEASE</spring-cloud-starter-oauth2.version>
-        <pagehelper-starter.version>1.4.2</pagehelper-starter.version>
-        <pagehelper.version>5.3.0</pagehelper.version>
         <druid.version>1.2.9</druid.version>
         <hutool.version>5.8.0</hutool.version>
-        <mybatis-generator.version>1.4.1</mybatis-generator.version>
-        <mybatis.version>3.5.9</mybatis.version>
         <mysql-connector.version>8.0.29</mysql-connector.version>
         <spring-data-commons.version>2.7.0</spring-data-commons.version>
         <jjwt.version>0.9.1</jjwt.version>
@@ -67,18 +63,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <!--MyBatis分页插件starter-->
-            <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper-spring-boot-starter</artifactId>
-                <version>${pagehelper-starter.version}</version>
-            </dependency>
-            <!--MyBatis分页插件-->
-            <dependency>
-                <groupId>com.github.pagehelper</groupId>
-                <artifactId>pagehelper</artifactId>
-                <version>${pagehelper.version}</version>
-            </dependency>
             <!--集成druid连接池-->
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -101,18 +85,6 @@
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
-            </dependency>
-            <!-- MyBatis 生成器 -->
-            <dependency>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-core</artifactId>
-                <version>${mybatis-generator.version}</version>
-            </dependency>
-            <!-- MyBatis-->
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>${mybatis.version}</version>
             </dependency>
             <!--Mysql数据库驱动-->
             <dependency>
@@ -188,5 +160,14 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

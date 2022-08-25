@@ -1,0 +1,26 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: user-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.199.128
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource #数据源，这里用的Druid
+    driver-class-name: com.mysql.cj.jdbc.Driver #驱动
+    url: jdbc:mysql://192.168.199.128:3306/user?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    username: root #数据库用户名
+    password: 123456 #密码
+  cache:
+    type: redis
+  redis:
+    host: 192.168.199.128
+    port: 6379
+    password: 123456
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
