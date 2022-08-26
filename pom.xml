@@ -6,6 +6,7 @@
     <modules>
         <module>common-utils</module>
         <module>user-service</module>
+        <module>user-consumer</module>
     </modules>
 
     <parent>

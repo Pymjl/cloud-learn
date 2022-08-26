@@ -1,12 +1,14 @@
 server:
-  port: 8081
+  port: 7001
 spring:
-  application:
-    name: UserService
   cloud:
     nacos:
       discovery:
         server-addr: 192.168.199.128
+  application:
+    name: UserConsumer
+  profiles:
+    active: dev
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #数据源，这里用的Druid
     driver-class-name: com.mysql.cj.jdbc.Driver #驱动

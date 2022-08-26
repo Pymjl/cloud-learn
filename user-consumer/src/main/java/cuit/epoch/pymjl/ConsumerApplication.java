@@ -7,12 +7,12 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 /**
  * @author Pymjl
  * @version 1.0
- * @date 2022/8/25 12:47
+ * @date 2022/8/26 12:13
  **/
 @SpringBootApplication
 @EnableDiscoveryClient
-public class UserServiceApplication {
+public class ConsumerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(UserServiceApplication.class, args);
+        SpringApplication.run(ConsumerApplication.class, args);
     }
 }
