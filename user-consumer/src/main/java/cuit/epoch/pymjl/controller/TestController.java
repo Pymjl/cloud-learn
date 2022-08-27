@@ -26,7 +26,7 @@ public class TestController {
     @Resource
     RestTemplate restTemplate;
 
-    @DubboReference(check = false)
+    @DubboReference
     UserService userService;
 
     @GetMapping("/test")
