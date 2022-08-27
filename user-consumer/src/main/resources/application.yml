@@ -26,3 +26,22 @@ management:
     web:
       exposure:
         include: "*"
+dubbo:
+  application:
+    name: ${spring.application.name}
+    logger: slf4j
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://192.168.199.128:8848
+  config-center:
+    address: nacos://192.168.199.128:8848
+  metadata-report:
+    address: nacos://192.168.199.128:8848
+  consumer:
+    validation: true
+    timeout: 3000
+    check: false
+  scan:
+    base-packages: cuit.epoch.pymjl.controller

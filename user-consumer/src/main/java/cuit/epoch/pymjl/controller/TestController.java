@@ -1,7 +1,12 @@
 package cuit.epoch.pymjl.controller;
 
+import cuit.epoch.pymjl.entity.User;
 import cuit.epoch.pymjl.result.CommonResult;
+import cuit.epoch.pymjl.result.ResultUtils;
+import cuit.epoch.pymjl.service.UserService;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -21,8 +26,22 @@ public class TestController {
     @Resource
     RestTemplate restTemplate;
 
+    @DubboReference(check = false)
+    UserService userService;
+
     @GetMapping("/test")
     public CommonResult consumerTest() {
         return restTemplate.getForObject(SERVICE_URL + "/user/test", CommonResult.class);
+    }
+
+    @GetMapping("/register")
+    public CommonResult<String> register() {
+        userService.register();
+        return ResultUtils.success();
+    }
+
+    @GetMapping("/get/{id}")
+    public CommonResult<User> get(@PathVariable("id") Long id) {
+        return ResultUtils.success(userService.get(id));
     }
 }

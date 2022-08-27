@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
@@ -22,7 +23,8 @@ public class UserController {
     private String port;
 
     @GetMapping("/test")
-    public CommonResult<String> test() throws UnknownHostException {
+    public CommonResult<String> test(HttpServletRequest request) throws UnknownHostException {
+        System.out.printf("被[/%s:%s]调用了一次%n", request.getRemoteHost(), request.getRemotePort());
         String hostAddress = InetAddress.getLocalHost().getHostAddress() + ":" + port;
         return ResultUtils.success(hostAddress);
     }

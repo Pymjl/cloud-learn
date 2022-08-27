@@ -44,6 +44,7 @@
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
         <velocity-engine-core.version>2.3</velocity-engine-core.version>
         <guava.version>31.0.1-jre</guava.version>
+        <dubbo.version>2.7.8</dubbo.version>
     </properties>
 
     <dependencyManagement>
@@ -158,6 +159,12 @@
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
+            </dependency>
+            <!--dubbo-->
+            <dependency>
+                <groupId>org.apache.dubbo</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

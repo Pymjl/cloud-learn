@@ -10,6 +10,7 @@ import java.io.Serializable;
  * @date 2022/8/20 16:21
  **/
 public class CommonResult<T> implements Serializable {
+    private static final long serialVersionUID = 1L;
     private T result;
     private Boolean succeed;
     private String message;
