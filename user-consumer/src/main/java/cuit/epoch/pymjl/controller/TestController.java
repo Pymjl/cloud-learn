@@ -21,7 +21,7 @@ import javax.annotation.Resource;
 @RestController
 @RequestMapping("/consumer")
 public class TestController {
-    private static final String SERVICE_URL = "http://UserService";
+    private static final String SERVICE_URL = "http://user-service";
 
     @Resource
     RestTemplate restTemplate;

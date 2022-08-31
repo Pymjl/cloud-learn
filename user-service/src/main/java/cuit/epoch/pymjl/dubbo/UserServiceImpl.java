@@ -5,6 +5,7 @@ import cuit.epoch.pymjl.entity.User;
 import cuit.epoch.pymjl.mapper.UserMapper;
 import cuit.epoch.pymjl.service.UserService;
 import org.apache.dubbo.config.annotation.DubboService;
+import org.springframework.stereotype.Service;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -14,6 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @date 2022/8/27 0:50
  **/
 @DubboService
+@Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
     private static final AtomicInteger ATOMIC_INTEGER = new AtomicInteger(0);
 
