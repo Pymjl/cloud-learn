@@ -44,7 +44,6 @@ public class UserServiceContext {
     @Test
     void testUserService() {
         userService.register();
-
     }
 
 }

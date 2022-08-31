@@ -43,5 +43,6 @@ dubbo:
     validation: true
     timeout: 3000
     check: false
+    loadbalance: roundrobin
   scan:
     base-packages: cuit.epoch.pymjl.controller
