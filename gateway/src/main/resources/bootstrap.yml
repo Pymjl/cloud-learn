@@ -2,20 +2,6 @@ spring:
   application:
     name: gateway-service
   cloud:
-    gateway:
-      globalcors:
-        cors-configurations:
-          '[/**]':
-            allowedHeaders: '*'
-            allowedMethods: '*'
-            allowedOrigins: '*'
-      routes:
-        - id: path_route
-          uri: ${service-url.user-service}/user/get/{id}
-          predicates:
-            - Path=/user/get/{id}
-      default-filters:
-        - DedupeResponseHeader=Access-Control-Allow-Origin, RETAIN_UNIQUE
     nacos:
       discovery:
         server-addr: 192.168.199.128:8848 #Nacos地址
