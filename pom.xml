@@ -8,6 +8,7 @@
         <module>user-service</module>
         <module>user-consumer</module>
         <module>user-openfegin-consumer</module>
+        <module>gateway</module>
     </modules>
 
     <parent>
