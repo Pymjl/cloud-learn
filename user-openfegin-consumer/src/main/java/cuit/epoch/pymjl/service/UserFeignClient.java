@@ -1,7 +1,8 @@
 package cuit.epoch.pymjl.service;
 
 import cuit.epoch.pymjl.entity.User;
-import cuit.epoch.pymjl.result.CommonResult;import org.springframework.cloud.openfeign.FeignClient;
+import cuit.epoch.pymjl.result.CommonResult;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 

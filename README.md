@@ -15,3 +15,5 @@
 [5.SpringCloud集成Dubbo实现RPC调用](http://www.pymjl.com/#/blog/cloud-learn-dubbo.md)
 
 [6.SpringCloud集成Nacos作为配置中心](http://www.pymjl.com/#/blog/cloud-learn-nacos-config)
+
+[7.Nacos整合OpenFeign实现RPC调用](http://www.pymjl.com/#/blog/cloud-learn-openfeign)
