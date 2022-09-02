@@ -1,5 +1,6 @@
 package cuit.epoch.pymjl.config;
 
+import com.alibaba.cloud.nacos.loadbalancer.NacosLoadBalancer;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.loadbalancer.core.RandomLoadBalancer;
 import org.springframework.cloud.loadbalancer.core.ReactorLoadBalancer;
@@ -31,7 +32,7 @@ public class MyLoadBalancerConfig {
         // 轮询
 //        return new RoundRobinLoadBalancer(loadBalancerClientFactory
 //                .getLazyProvider(name, ServiceInstanceListSupplier.class), name);
-//        // Nacos权重轮询
+////        // Nacos权重轮询
 //        return new NacosLoadBalancer(loadBalancerClientFactory
 //                .getLazyProvider(name, ServiceInstanceListSupplier.class), name, nacosDiscoveryProperties);
     }

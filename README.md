@@ -19,3 +19,7 @@
 [7.Nacos整合OpenFeign实现RPC调用](http://www.pymjl.com/#/blog/cloud-learn-openfeign)
 
 [8.Nacos整合Gateway入门实例](http://www.pymjl.com/#/blog/cloud-learn-gateway)
+
+[9.Spring Cloud Gateway的过滤器配置](http://www.pymjl.com/#/blog/cloud-learn-gateway-filter)
+
+[10.Nacos整合Spring Cloud Gateway实现动态路由](http://www.pymjl.com/#/blog/cloud-learn-gateway-dynamic-config)

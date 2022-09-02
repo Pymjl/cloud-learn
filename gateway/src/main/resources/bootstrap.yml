@@ -2,9 +2,16 @@ spring:
   application:
     name: gateway-service
   cloud:
+    loadbalancer:
+      nacos:
+        enabled: true
     nacos:
       discovery:
         server-addr: 192.168.199.128:8848 #Nacos地址
       config:
         server-addr: 192.168.199.128:8848 #Nacos地址
         file-extension: yaml #这里我们获取的yaml格式的配置
+    gateway:
+      discovery:
+        locator:
+          enabled: true
