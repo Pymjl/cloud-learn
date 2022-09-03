@@ -1,5 +1,6 @@
 package cuit.epoch.pymjl.dubbo;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import cuit.epoch.pymjl.entity.User;
 import cuit.epoch.pymjl.mapper.UserMapper;

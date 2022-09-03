@@ -23,3 +23,5 @@
 [9.Spring Cloud Gateway的过滤器配置](http://www.pymjl.com/#/blog/cloud-learn-gateway-filter)
 
 [10.Nacos整合Spring Cloud Gateway实现动态路由](http://www.pymjl.com/#/blog/cloud-learn-gateway-dynamic-config)
+
+[11.Sentinel的安装与配置](http://www.pymjl.com/#/blog/cloud-learn-sentinel)

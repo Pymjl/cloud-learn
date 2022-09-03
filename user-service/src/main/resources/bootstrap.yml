@@ -8,6 +8,12 @@ spring:
       config:
         server-addr: 192.168.199.128:8848 #Nacos地址
         file-extension: yaml #这里我们获取的yaml格式的配置
+    sentinel:
+      transport:
+        #配置 Sentinel dashboard 地址
+        dashboard: 192.168.199.128:8858
+        #默认8719端口，假如被占用会自动从8719开始依次+1扫描,直至找到未被占用的端口
+        port: 8719
 
 management:
   endpoints:
