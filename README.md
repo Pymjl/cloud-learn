@@ -25,3 +25,5 @@
 [10.Nacos整合Spring Cloud Gateway实现动态路由](http://www.pymjl.com/#/blog/cloud-learn-gateway-dynamic-config)
 
 [11.Sentinel的安装与配置](http://www.pymjl.com/#/blog/cloud-learn-sentinel)
+
+[12.@SentinelResource注解详解](http://www.pymjl.com/#/blog/cloud-learn-sentinelresource)
