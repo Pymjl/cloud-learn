@@ -27,3 +27,5 @@
 [11.Sentinel的安装与配置](http://www.pymjl.com/#/blog/cloud-learn-sentinel)
 
 [12.@SentinelResource注解详解](http://www.pymjl.com/#/blog/cloud-learn-sentinelresource)
+
+[13.Sentinel流控与熔断降级规则详解](http://www.pymjl.com/#/blog/cloud-learn-sentinel-rules)
