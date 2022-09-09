@@ -29,3 +29,5 @@
 [12.@SentinelResource注解详解](http://www.pymjl.com/#/blog/cloud-learn-sentinelresource)
 
 [13.Sentinel流控与熔断降级规则详解](http://www.pymjl.com/#/blog/cloud-learn-sentinel-rules)
+
+[14.Sentinel集成Nacos对流控与降级规则的持久化](http://www.pymjl.com/#/blog/cloud-learn-sentinel-dynamic-config)
