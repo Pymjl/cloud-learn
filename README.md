@@ -31,3 +31,5 @@
 [13.Sentinel流控与熔断降级规则详解](http://www.pymjl.com/#/blog/cloud-learn-sentinel-rules)
 
 [14.Sentinel集成Nacos对流控与降级规则的持久化](http://www.pymjl.com/#/blog/cloud-learn-sentinel-dynamic-config)
+
+[15.Spring Cloud Gateway集成Sentinel流控](http://www.pymjl.com/#/blog/cloud-learn-sentinel-gateway)
