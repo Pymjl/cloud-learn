@@ -29,7 +29,9 @@ public enum ResultEnum {
     /**
      * 身份验证失败
      */
-    AUTHENTICATION_FAILED("认证失败", false);
+    AUTHENTICATION_FAILED("认证失败", false),
+
+    SENTINEL_FALLBACK_ERROR("Sentinel熔断", false);
 
     private String msg;
     private Boolean succeed;

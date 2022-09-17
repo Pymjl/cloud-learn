@@ -33,3 +33,5 @@
 [14.Sentinel集成Nacos对流控与降级规则的持久化](http://www.pymjl.com/#/blog/cloud-learn-sentinel-dynamic-config)
 
 [15.Spring Cloud Gateway集成Sentinel流控](http://www.pymjl.com/#/blog/cloud-learn-sentinel-gateway)
+
+[16.OpenFeign集成Sentinel实现服务的熔断降级](http://www.pymjl.com/#/blog/cloud-learn-sentinel-openfeign)

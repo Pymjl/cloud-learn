@@ -3,6 +3,7 @@ package cuit.epoch.pymjl.controller;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import cuit.epoch.pymjl.entity.User;
+import cuit.epoch.pymjl.exception.AppException;
 import cuit.epoch.pymjl.result.CommonResult;
 import cuit.epoch.pymjl.result.ResultUtils;
 import cuit.epoch.pymjl.service.UserService;
@@ -17,6 +18,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author Pymjl
@@ -27,6 +29,8 @@ import java.net.UnknownHostException;
 @RequestMapping("/user")
 @Log4j2
 public class UserController {
+    private static final AtomicInteger ATOMIC_INTEGER = new AtomicInteger(0);
+
     @Resource
     UserService userService;
 
@@ -51,6 +55,11 @@ public class UserController {
     @GetMapping("/get/{id}")
     @SentinelResource(value = "getUser")
     public CommonResult<User> get(@PathVariable("id") Long id) {
+        int cnt = ATOMIC_INTEGER.incrementAndGet();
+        log.info("cnt=={}", cnt);
+        if (cnt % 2 == 0) {
+            throw new AppException("发生了异常");
+        }
         return ResultUtils.success(userService.get(id));
     }
 

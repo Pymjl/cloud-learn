@@ -1,6 +1,7 @@
 package cuit.epoch.pymjl.service;
 
 import cuit.epoch.pymjl.entity.User;
+import cuit.epoch.pymjl.feign.FeignServiceFallback;
 import cuit.epoch.pymjl.result.CommonResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @version 1.0
  * @date 2022/9/1 0:03
  **/
-@FeignClient(value = "user-service")
+@FeignClient(value = "user-service", fallback = FeignServiceFallback.class)
 public interface UserFeignClient {
     /**
      * 注册
